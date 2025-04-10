@@ -28,15 +28,16 @@ public class Main {
         if(num01 > num02) {
 
             throw new ParametrosInvalidosException();
-        }
+        } else {
 
-        sum = num01 - num02;
-        if(sum <= 0) {
+            sum = num01 - num02;
+            if (sum <= 0) {
 
-            sum = num02 - num01;
-            for (int i = 0; i < sum; i++) {
+                sum = num02 - num01;
+                for (int i = 0; i < sum; i++) {
 
-                System.out.println(count01 += 1);
+                    System.out.println(count01 += 1);
+                }
             }
         }
     }
