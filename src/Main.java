@@ -1,3 +1,4 @@
+import domain.ParametrosInvalidos;
 import domain.ParametrosInvalidosException;
 
 import java.util.Scanner;
@@ -18,10 +19,13 @@ public class Main {
         } catch (ParametrosInvalidosException e) {
 
             System.out.println("Error: " + e.getMessage());
+        } catch (ParametrosInvalidos er) {
+
+            System.out.println("Error: " + er.getMessage());
         }
     }
 
-    public static void count(int num01, int num02) throws ParametrosInvalidosException {
+    public static void count(int num01, int num02) throws ParametrosInvalidosException, ParametrosInvalidos {
 
         int sum, count01;
         count01 = 0;
@@ -39,7 +43,7 @@ public class Main {
                     System.out.println(count01 += 1);
                 }
             } else {
-                System.out.println("Um dos valores devem ser maior do que o outro!");
+                throw new ParametrosInvalidos();
             }
         }
     }
