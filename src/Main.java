@@ -39,7 +39,7 @@ public class Main {
                     System.out.println(count01 += 1);
                 }
             } else {
-                throw new ParametrosInvalidosException();
+                System.out.println("Um dos valores devem ser maior do que o outro!");
             }
         }
     }
