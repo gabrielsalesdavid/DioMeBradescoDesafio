@@ -31,13 +31,15 @@ public class Main {
         } else {
 
             sum = num01 - num02;
-            if (sum <= 0) {
+            if (sum < 0) {
 
                 sum = num02 - num01;
                 for (int i = 0; i < sum; i++) {
 
                     System.out.println(count01 += 1);
                 }
+            } else {
+                throw new ParametrosInvalidosException();
             }
         }
     }
